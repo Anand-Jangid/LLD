@@ -7,23 +7,23 @@
         <mxCell id="e2QfvYozoEqc-g44KyvQ-0" value="Employee" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="120" y="170" width="270" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="e2QfvYozoEqc-g44KyvQ-1" value="&lt;div&gt;+ threads : List&amp;lt;Thread&amp;lt;Task&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+currTask : Task?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-0">
+        <mxCell id="e2QfvYozoEqc-g44KyvQ-1" value="&lt;div&gt;- threads : List&amp;lt;Thread&amp;lt;Task&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;- currTask : Task?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-0">
           <mxGeometry y="26" width="270" height="54" as="geometry" />
         </mxCell>
         <mxCell id="e2QfvYozoEqc-g44KyvQ-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-0">
           <mxGeometry y="80" width="270" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="e2QfvYozoEqc-g44KyvQ-3" value="+ createThread(int priority, String name) : void&lt;div&gt;+ addTask(Task task) : void&lt;/div&gt;&lt;div&gt;+ removeTask(Task task) : void&lt;/div&gt;&lt;div&gt;+ startTask(Task task) : void&lt;/div&gt;&lt;div&gt;+ completeTask(Task task) : void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-0">
+        <mxCell id="e2QfvYozoEqc-g44KyvQ-3" value="+ createThread(int priority, String name, isPrivate, owner Employee) : void&lt;div&gt;+ updateThread(int priority, String name, isPrivate)&lt;/div&gt;&lt;div&gt;+ addTask(Task task, Thread thread) : void&lt;/div&gt;&lt;div&gt;- removeTask(Task task, Thread thread) : void&lt;/div&gt;&lt;div&gt;+ startTask(Task task) : void&lt;/div&gt;&lt;div&gt;+ completeTask(Task task) : void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-0">
           <mxGeometry y="88" width="270" height="132" as="geometry" />
         </mxCell>
         <mxCell id="e2QfvYozoEqc-g44KyvQ-4" value="Thread" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="470" y="170" width="160" height="128" as="geometry" />
+          <mxGeometry x="470" y="170" width="160" height="168" as="geometry" />
         </mxCell>
-        <mxCell id="e2QfvYozoEqc-g44KyvQ-5" value="+ threadName : String&lt;div&gt;+ priority : integer&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-4">
+        <mxCell id="e2QfvYozoEqc-g44KyvQ-5" value="- threadName : String&lt;div&gt;- priority : integer&lt;/div&gt;&lt;div&gt;- isPrivate : boolean&lt;/div&gt;&lt;div&gt;- owner : Employee&lt;/div&gt;&lt;div&gt;- id : integer&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-4">
           <mxGeometry y="26" width="160" height="94" as="geometry" />
         </mxCell>
         <mxCell id="e2QfvYozoEqc-g44KyvQ-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="e2QfvYozoEqc-g44KyvQ-4">
-          <mxGeometry y="120" width="160" height="8" as="geometry" />
+          <mxGeometry y="120" width="160" height="48" as="geometry" />
         </mxCell>
         <mxCell id="e2QfvYozoEqc-g44KyvQ-8" value="Task" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="460" y="410" width="160" height="124" as="geometry" />
